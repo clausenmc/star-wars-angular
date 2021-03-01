@@ -18,8 +18,6 @@ Run `npm start` because it implements proxy configuration to avoid CORS error. N
  
 ## Preview
 ![](/star-wars-1.png)
-![](/star-wars-2.png)
-![](/star-wars-3.png)
 
 ## Demo
 
