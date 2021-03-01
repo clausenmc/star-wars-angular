@@ -1,0 +1,24 @@
+
+<div class="container-fluid">
+
+    <div class="loading" *ngIf="loading">
+        <img src="https://thumbs.gfycat.com/BowedKindlyBrahmanbull-size_restricted.gif" alt="">
+    </div>
+    
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-xs-6" *ngFor="let film of filmList; index as i; first as isFirst">
+            <div class="card mb-4">
+                <div class="card-body">
+                  <a class="card-title" href="/episodio/{{film.episode_id}}">{{film.episode_id}}.  {{film.title}}</a>
+                  <p class="card-text">{{film.director | invert}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{film.opening_crawl}}</li>
+                  <li class="list-group-item">{{film.release_date}} </li>
+                </ul>
+            </div>
+          </div>
+      </div>
+
+</div>
+

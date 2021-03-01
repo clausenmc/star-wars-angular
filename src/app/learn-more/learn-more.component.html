@@ -1,0 +1,28 @@
+<h4 class="title">Saber más</h4>
+
+<form  [formGroup]="myForm" (ngSubmit)="saveData()" >
+  <div>
+    <label for="">Nombre</label>
+    <input type="text" formControlName="name" placeholder="name">
+  </div>
+  <div *ngIf="myForm.get('name').errors && myForm.get('name').dirty">
+    <p *ngIf="myForm.get('name').hasError ('campo requerido')"></p>
+  </div>
+  <div>
+    <label for="">Apellido</label>
+    <input type="text" formControlName="lastname" placeholder="lastname">
+  </div>
+  <div *ngIf="myForm.get('lastname').errors && myForm.get('lastname').dirty">
+    <p *ngIf="myForm.get('lastname').hasError ('campo requerido')"></p>
+  </div>
+  <div>
+    <label for="">Fecha de nacimiento</label>
+    <input type="date" formControlName="birth" placeholder="birth">
+  </div>
+  <div *ngIf="myForm.get('birth').errors && myForm.get('birth').dirty">
+    <p *ngIf="myForm.get('birth').hasError ('campo requerido')"></p>
+  </div>
+  <div>
+    <button type="submit" [disabled]="myForm.invalid">Save</button>
+  </div>
+</form>

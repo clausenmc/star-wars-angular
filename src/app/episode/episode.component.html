@@ -1,0 +1,52 @@
+
+<div *ngIf="loading" style="color: white;"> loading... </div>
+
+<div class="episode" >
+
+    <h2>{{film.episode_id}}. {{film.title}}</h2>
+
+    <div class="items-wrapper">
+        <span class="label">Director</span>
+        <span class="item">{{film.director}}</span>
+    </div>
+    <div class="items-wrapper">
+        <span class="label">Producer</span>
+        <span class="item">{{film.producer}}</span>
+    </div>
+    <div class="items-wrapper">
+        <span class="label">Fecha de lanzamiento</span>
+        <span class="item">{{film.release_date}}</span>
+    </div>
+
+    <h3>Personajes</h3>
+    <div class="item-wrapper">
+        <div *ngFor="let character of film.characters; index as i; first as isFirst" >
+            <app-characters [childrenItem]="character"></app-characters>
+        </div>
+    </div>
+    
+
+    <h3>Planetas</h3>
+    <div class="item-wrapper">
+        <div *ngFor="let planet of film.planets; index as i; first as isFirst" >
+            <app-planets [childrenItem]="planet"></app-planets>
+        </div>
+
+    </div>
+    
+
+    <h3>Naves</h3>
+    <div class="item-wrapper">
+        <div *ngFor="let starship of film.starships; index as i; first as isFirst" >
+         <app-starships [childrenItem]="starship"></app-starships>
+        </div>
+    </div>
+    
+
+    
+
+    
+
+    
+
+</div>

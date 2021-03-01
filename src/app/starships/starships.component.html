@@ -1,0 +1,23 @@
+<div *ngIf="loading; else elseBlock" style="color: white;"> loading... </div>
+
+<ng-template #elseBlock>
+
+    <div class="starships">
+    
+        <div class="items-wrapper">
+            <span class="label">Nombre</span>
+            <span class="item">{{starship.name}}</span>
+        </div>
+    
+        <div class="items-wrapper">
+            <span class="label">No. Pasajeros</span>
+            <span class="item">{{starship.passengers}}</span>
+        </div>
+    
+        <div class="items-wrapper">
+            <span class="label">Longitud</span>
+            <span class="item">{{starship.length}} m</span>
+        </div>
+    </div>
+    
+</ng-template>

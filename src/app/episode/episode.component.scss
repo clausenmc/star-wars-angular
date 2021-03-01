@@ -1,0 +1,32 @@
+@import "../../assets/scss/vars.scss";
+@import "../../assets/scss/mixins.scss";
+
+.episode {
+    color: $white;
+
+    h2 {
+        color: $yellow;
+    }
+
+    h3 {
+       color: $orange; 
+       font-size: 1.5rem;
+    }
+
+    
+
+    .item-wrapper {
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+}
+.label {
+    color: $light-gray;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.item {
+    margin-left: 10px;
+    font-size: 1.1rem;
+}

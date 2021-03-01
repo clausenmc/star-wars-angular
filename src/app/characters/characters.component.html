@@ -1,0 +1,18 @@
+<div *ngIf="loading; else elseBlock" style="color: white;"> loading... {{childrenItem}} </div>
+
+<ng-template #elseBlock>
+    <div class="characters">
+    
+        <div class="items-wrapper">
+            <span class="label">Nombre</span>
+            <span class="item">{{character.name}}</span>
+        </div>
+    
+        <div class="items-wrapper">
+            <span class="label">Peso</span>
+            <span class="item">{{character.mass}} kg</span>
+        </div>
+    </div>
+
+</ng-template>
+

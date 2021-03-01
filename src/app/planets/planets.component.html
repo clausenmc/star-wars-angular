@@ -1,0 +1,24 @@
+<div *ngIf="loading; else elseBlock" style="color: white;"> loading... </div>
+
+<ng-template #elseBlock>
+    <div class="planets">
+    
+        <div class="items-wrapper">
+            <span class="label">Nombre</span>
+            <span class="item">{{planet.name}}</span>
+        </div>
+    
+        <div class="items-wrapper">
+            <span class="label">Diámetro</span>
+            <span class="item">{{planet.diameter}} km</span>
+        </div>
+    
+        <div class="items-wrapper">
+            <span class="label">Periodo de rotación</span>
+            <span class="item">{{planet.rotation_period}} hours</span>
+        </div>
+    </div>
+
+</ng-template>
+
+
